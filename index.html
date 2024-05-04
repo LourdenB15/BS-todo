@@ -12,7 +12,7 @@
     />
     <style>
       .h1 {
-        margin: 0 !important;
+        margin: 0 ;
       }
       .navbar {
         padding: 1em 0 1em 0;
@@ -26,13 +26,26 @@
       body {
         background-color: gray;
       }
+      .card-body {
+        padding-top: 0.5em;
+      }
+      .card-header {
+        padding-bottom: 0;
+      }
+      .card {
+        min-width: 300px;
+      }
+     
     </style>
   </head>
 
   <body>
+
+
+    <!-- ///////////NAVBAR/////////// -->
     <nav class="navbar fixed-top navbar-dark bg-dark">
       <div class="container">
-        <a href="index.html" class="h1 navbar-brand">Todo List</a>
+        <a href="index.html" class="h1 fs-3 navbar-brand">Todo List</a>
         <button
           class="btn btn-warning btn-sm text fw-semibold rounded-5 px-3"
           data-bs-toggle="modal"
@@ -42,51 +55,54 @@
         </button>
       </div>
     </nav>
-    <!-- <div id="modal1" class="modal fade">
-      <div class="modal-dialog modal-lg mt-7">
-        <div class="modal-content p-5">
-          <div class="row"> -->
+    <!-- ///////////NAVBAR/////////// -->
+
+    <!-- ///////////MODAL/////////// -->        
     <div id="modal1" class="modal fade">
       <div class="modal-dialog mt-6 " >
         <div class="modal-content p-5 bg-dark">
           <div class="row">
             <div class="col-12">
-              <div >
+    <!-- ///////////FORM/////////// -->
+
+              <div>
                 <p class="text-white fs-1 fw-semibold text-center">Todo</p>
-                <form class="d-flex flex-column gap-4">
+                <form action="#" class="input-field d-flex flex-column gap-4">
                   <div class="form-floating">
                     <input
-                      class="form-control"
+                      class="input-title form-control"
                       placeholder="Title"
-                      id="floatingTextarea"
+                      id="floatingTextarea" required
                     ></input>
                     <label for="floatingTextarea">Title</label>
                   </div>
 
                   <div class="form-floating">
                     <textarea
-                      class="form-control"
+                      class="input-description form-control"
                       placeholder="Leave a comment here"
                       id="floatingTextarea2"
-                      style="height: 100px"
+                      style="height: 100px" required
                     ></textarea>
                     <label for="floatingTextarea2">Description</label>
                   </div>
                   <div class="d-flex gap-1 justify-content-end">
-                    <button type="button" class="btn btn-warning fw-semibold" data-bs-dismiss="modal">ADD</button>
+                    <input type="submit" class="add-btn btn btn-warning fw-semibold" value="ADD">
                     <button type="button" class="btn btn-light fw-semibold" data-bs-dismiss="modal">Close</button>
                   </div>
                 </form>
               </div>
+
+    <!-- ///////////FORM/////////// -->
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- ///////////NAVBAR/////////// -->
     <section>
       <div class="pt-6">
-        <div class="container d-flex">lorem*6</div>
+        <div class="card-wrapper container d-flex flex-wrap gap-4 justify-content-center"></div>
       </div>
     </section>
     <script
